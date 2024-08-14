@@ -20,3 +20,5 @@ def compare_models(tf_model_name: str, pt_model_name: str):
 
     pt_loaded_model = torch.load(pt_model_name)
     print(torchsummary.summary(pt_loaded_model))
+
+compare_models('ev_l1_cnn.h5','ev_l1_cnn_pytorch.pt')
