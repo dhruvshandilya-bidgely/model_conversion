@@ -1,5 +1,5 @@
 onnx==1.11.0
-onnx2pytorch==0.4.1
+onnx2pytorch==0.3.0
 tensorflow==2.2
 tf2onnx==1.11.1
 torch==1.10.2

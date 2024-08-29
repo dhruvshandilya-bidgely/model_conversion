@@ -3,7 +3,7 @@ from tensorflow import summary
 import torch
 import torchsummary
 
-def compare_models(tf_model_name: str, pt_model_name: str):
+def compare_models( pt_model_name: str):
     """
     Prints model architecture of both models
 
@@ -15,10 +15,8 @@ def compare_models(tf_model_name: str, pt_model_name: str):
         (None) : prints both model layers to be inspected.
     """
 
-    tf_loaded_model = load_model(tf_model_name)
-    print(tf_loaded_model.summary())
 
     pt_loaded_model = torch.load(pt_model_name)
     print(torchsummary.summary(pt_loaded_model))
 
-compare_models('ev_l1_cnn.h5','ev_l1_cnn_pytorch.pt')
+compare_models('ev_l1_cnn_pytorch.pt')
